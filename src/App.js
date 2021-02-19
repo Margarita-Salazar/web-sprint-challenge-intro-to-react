@@ -24,12 +24,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <div className="Character-Container">
-
-      {characters.map((character)=>{
-        return <Character key={character.name} character={character}/>
-      })}
-      </div>
+      <Character character={characters}/>
       
     </div>
   );

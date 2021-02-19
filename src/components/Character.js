@@ -1,6 +1,11 @@
 // Write your Character component here
 import React from 'react';
 import styled from 'styled-components'
+const CharacterContainer=styled.div`
+    margin: auto;
+    padding: 12px;
+    width: 30%;
+`
 const CharatererDiv = styled.div`
     opacity: 1;
     color: black;
@@ -15,9 +20,11 @@ const CharatererDiv = styled.div`
 function Character(props){
     const { character } = props
     return (
-        <CharatererDiv>
-            <p>Name: {character.name}</p>
-        </CharatererDiv>
+        <CharacterContainer>
+            {character.map((character)=>{
+             return <CharatererDiv>{character.name}</CharatererDiv>;
+             })}
+        </CharacterContainer>
     )
 }
 export default Character
